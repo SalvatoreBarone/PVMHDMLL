@@ -1,6 +1,6 @@
 import sys
 from xml.etree import ElementTree
-from anytree import Node, RenderTree
+from anytree import Node
 from .TreeModel import *
 
 class PMMLParser:
@@ -21,9 +21,7 @@ class PMMLParser:
         root = tree.getroot()
 
         self.__get_classes(root, self.__classes)
-        print("Classes: ", self.__classes)
         self.__get_features(root, self.__features)
-        print("Features:", self.__features)
         
         segmentation = root.find("pmml:MiningModel/pmml:Segmentation", self.__namespaces)
         if segmentation is not None:
@@ -32,20 +30,18 @@ class PMMLParser:
                 tree_model_root = segment.find("pmml:TreeModel", self.__namespaces).find("pmml:Node", self.__namespaces)
                 tree = self.__get_tree_model("tree_1", tree_model_root)
                 self.__trees.append(tree)
-                tree.print()
         else:
             tree_model_root = root.find("pmml:TreeModel", self.__namespaces).find("pmml:Node", self.__namespaces)
             tree = self.__get_tree_model("tree_1", tree_model_root)
             self.__trees.append(tree)
-            tree.print()
 
     def get_classes(self):
         return self.__classes
 
-    def __get_features(self):
+    def get_features(self):
         return self.__features
 
-    def get_model(self):
+    def get_trees(self):
         return self.__trees
 
     """

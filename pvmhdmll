@@ -3,6 +3,7 @@ import sys
 import getopt
 
 from src.PMMLParser import *
+from src.TreeModel import *
 
 def helpme():
     print("pvmhdmll - a VHDL source code generator for PMML models")
@@ -36,7 +37,18 @@ try:
     print("Config. file:    ", config_file)
     print("Output directury:", output_dir)
     model = PMMLParser(input_pmml_file)
-except NameError:
+
+    print("Classes: ", model.get_classes())
+    print("Features:", model.get_features())
+    for tree in model.get_trees():
+        tree.print()
+        print("Decision boxes", tree.get_decision_boxes())
+        print("Leaves",tree.get_leaves())
+        print("Assertions", tree.get_assertion_functions(model.get_classes()))
+        
+
+except NameError as err:
+    print (err.message)
     helpme()
     sys.exit(2)
 
