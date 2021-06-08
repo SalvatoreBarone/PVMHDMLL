@@ -1,3 +1,9 @@
 tesi.pdf
 src/__pycache__/
 pvmhdmll.code-workspace
+resources/vhd/old/*
+prova/*
+prova_random_forest/*
+resources/vhd/tb/oracles_generator/a.out
+
+resources/vhd/tb/oracles_generator/build/

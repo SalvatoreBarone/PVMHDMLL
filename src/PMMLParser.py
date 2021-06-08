@@ -26,13 +26,15 @@ class PMMLParser:
         segmentation = root.find("pmml:MiningModel/pmml:Segmentation", self.__namespaces)
         if segmentation is not None:
             # The prediction model is based upon single decision tree
+            tree_id = 0
             for segment in segmentation.findall("pmml:Segment", self.__namespaces):
                 tree_model_root = segment.find("pmml:TreeModel", self.__namespaces).find("pmml:Node", self.__namespaces)
-                tree = self.__get_tree_model("tree_1", tree_model_root)
+                tree = self.__get_tree_model("tree_" + str(tree_id), tree_model_root)
                 self.__trees.append(tree)
+                tree_id += 1
         else:
             tree_model_root = root.find("pmml:TreeModel", self.__namespaces).find("pmml:Node", self.__namespaces)
-            tree = self.__get_tree_model("tree_1", tree_model_root)
+            tree = self.__get_tree_model("tree_0", tree_model_root)
             self.__trees.append(tree)
 
     def get_classes(self):
@@ -56,7 +58,7 @@ class PMMLParser:
         for child in root.find("pmml:DataDictionary", self.__namespaces).findall('pmml:DataField', self.__namespaces):
             if child.find("pmml:Interval", self.__namespaces) is None:
                 continue
-            features.append(child.attrib['name'])
+            features.append({"name" : child.attrib['name'].replace('-','_'), "type" : child.attrib['dataType']})
 
     """
     @brief Scan the DataDictionary section of the PMML file for classes
@@ -70,7 +72,7 @@ class PMMLParser:
         for child in root.find("pmml:DataDictionary", self.__namespaces).findall('pmml:DataField', self.__namespaces):
             if child.find("pmml:Interval", self.__namespaces) is None:
                 for element in child.findall("pmml:Value", self.__namespaces):
-                    classes.append(element.attrib['value'])
+                    classes.append(element.attrib['value'].replace('-','_'))
                     
 
     """
@@ -87,14 +89,11 @@ class PMMLParser:
     """
     def __get_tree_model(self, tree_name, tree_model_root):
         tree = Node('Node_' + tree_model_root.attrib['id'], feature = "", operator = "", threshold_value = "", boolean_expression = "")
-        self.__get_tree_nodes_recursively( tree_name, tree_model_root, tree)
-        return TreeModel(tree)
+        self.__get_tree_nodes_recursively(tree_model_root, tree)
+        return TreeModel(tree_name, tree)
 
     """
     @brief Recoursively scan a parsed pmml tree model, building the internal data structure needed to generate HDL
-
-    @param  tree_name
-            The distinctive name of a tree model
 
     @param  element_tree_node
             The root node of the tree, from the parsed pmml object
@@ -103,7 +102,7 @@ class PMMLParser:
             The root node of the tree, from the anytree object that will hold the data structure needed to generate HDL
 
     """
-    def __get_tree_nodes_recursively(self, tree_name, element_tree_node, parent_tree_node):
+    def __get_tree_nodes_recursively(self, element_tree_node, parent_tree_node):
         children = element_tree_node.findall("pmml:Node", self.__namespaces);
         if len(children) > 2:
             print("Only binary trees are supported. Aborting")
@@ -118,7 +117,7 @@ class PMMLParser:
             if predicate is None:
                 print("Predicate is None")
             else:
-                feature         = predicate.attrib['field']
+                feature         = predicate.attrib['field'].replace('-','_')
                 operator        = predicate.attrib['operator']
                 threshold_value = predicate.attrib['value']
                 """
@@ -144,9 +143,9 @@ class PMMLParser:
 
             if child.find("pmml:Node", self.__namespaces) is None:
                 # if the considered node is a leaf (it has no pmml:Node children), we are interested in the class that the node belongs to
-                new_tree_node = Node('Node_' + child.attrib['id'], parent = parent_tree_node, score = child.attrib['score'], boolean_expression = boolean_expression)
+                new_tree_node = Node('Node_' + child.attrib['id'], parent = parent_tree_node, score = child.attrib['score'].replace('-','_'), boolean_expression = boolean_expression)
             else:
                 # if the considered node is a not leaf (it has pmml:Node children), we will go on with recursion
                 new_tree_node = Node('Node_' + child.attrib['id'], parent = parent_tree_node, feature = "", operator = "", threshold_value = "", boolean_expression = boolean_expression)
-                self.__get_tree_nodes_recursively(tree_name, child, new_tree_node)
+                self.__get_tree_nodes_recursively(child, new_tree_node)
 
