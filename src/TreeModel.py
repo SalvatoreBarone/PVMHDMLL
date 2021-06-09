@@ -21,20 +21,31 @@ class TreeModel:
                 data_type = ""
                 for feature in features:
                     if feature["name"] == node.feature:
+                        c_operator = ""
+                        if node.operator == "greaterThan":
+                          c_operator = ">"
+                        elif node.operator == "lessThan":
+                          c_operator = "<"
+                        else: 
+                          c_operator = "=="
                         if feature["type"] == "double" or feature["type"] == "float":
                             data_type = "float"
                             boxes.append({  "name"      : node.name, 
-                                "feature"   : node.feature,
-                                "data_type" : data_type,
-                                "operator"  : node.operator, 
-                                "threshold" : str(self.float_to_hex(float(node.threshold_value)))[2:]})
+                                "feature"       : node.feature,
+                                "data_type"     : data_type,
+                                "operator"      : node.operator,
+                                "c_operator"    : c_operator,
+                                "threshold"     : str(node.threshold_value),
+                                "threshold_hex" : str(self.float_to_hex(float(node.threshold_value)))[2:]})
                         elif feature["type"] == "integer":
                             data_type = "int"
-                            boxes.append({  "name"      : node.name, 
-                                            "feature"   : node.feature,
-                                            "data_type" : data_type,
-                                            "operator"  : node.operator, 
-                                            "threshold" : str(hex(int(node.threshold_value)))[2:]})
+                            boxes.append({  "name"          : node.name, 
+                                            "feature"       : node.feature,
+                                            "data_type"     : data_type,
+                                            "operator"      : node.operator,
+                                            "c_operator"    : c_operator,
+                                            "threshold"     : str(node.threshold_value),
+                                            "threshold_hex" : str(hex(int(node.threshold_value)))[2:]})
         return boxes
 
     def get_leaves(self):

@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <assert.h>
+#include "model.h"
+
+typedef union {
+  float f;
+  unsigned u;
+} ufloat;
+
+
+void print_binary(int amount, int num)
+{
+  assert(amount <= 32);
+  for (int i = amount-1; i >= 0; i--)
+    printf("%d", (num & (1<<i)) ? 1 : 0);
+}
+
+int main()
+{
+  srand(time(NULL));
+{% for feature in features -%}
+{{"  "}}{{"ufloat" if feature['type'] == "float" else feature['type']}}{{" data_"}}{{feature['name']}}{{";"}}
+{% endfor %}
+{% for predicted_class in classes -%}
+{{"  int class_"}}{{predicted_class}}{{";"}}
+{% endfor %}
+
+  for (int i = 0; i < 10000; i++){
+{% for feature in features -%}
+{{"    data_"}}{{feature['name']}}{{".f = rand() / rand();" if feature['type'] == "float" else " = rand();"}}
+{{"    print_binary(32, data_"}}{{feature['name']}}{{".u);" if feature['type'] == "float" else ");"}}{{" printf(\" \");"}}
+{% endfor %}
+    classifier({% for feature in features -%}{{"data_"}}{{feature['name']}}{{".f, " if feature['type'] == "float" else ", "}}{% endfor %}{% for predicted_class in classes -%}{{"&class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
+{% for predicted_class in classes -%}
+{{"    print_binary(32, class_"}}{{predicted_class}}{{");"}}{{" printf(\" \");"}}
+{% endfor %}
+  }
+}

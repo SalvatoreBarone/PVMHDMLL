@@ -21,24 +21,21 @@ add_custom_target(runtest COMMAND ${CMAKE_CTEST_COMMAND} --verbose --build-run-d
 add_vhdl_source(bnf.vhd bnf)
 add_vhdl_source(decision_box.vhd decision_box)
 add_vhdl_source(tb/debug_func.vhd debug_func)
-
 add_testbench_source(tb/tb_basic_comparator.vhd tb_basic_comparator)
 add_dependencies(tb_basic_comparator decision_box debug_func)
-
 add_testbench_source(tb/tb_parallel_comparator.vhd tb_parallel_comparator)
 add_dependencies(tb_parallel_comparator decision_box debug_func)
-
-
 add_testbench_source(tb/tb_decision_box_fp.vhd tb_decision_box_fp)
 add_dependencies(tb_decision_box_fp decision_box debug_func)
-
 add_testbench_source(tb/tb_decision_box_int.vhd tb_decision_box_int)
 add_dependencies(tb_decision_box_int decision_box debug_func)
 
 {% for entity in entities -%}
-    {{"add_vhdl_source("}}{{entity}}{{".vhd "}}{{entity}}{{")\nadd_dependencies("}}{{entity}}{{" bnf decision_box)"}}
+  {{"add_vhdl_source("}}{{entity}}{{".vhd "}}{{entity}}{{")\nadd_dependencies("}}{{entity}}{{" bnf decision_box)"}}
 {% endfor %}
 
+{% for entity in entities -%}
+  {{"add_testbench_source(tb/tb_"}}{{entity}}{{".vhd tb_"}}{{entity}}{{")\nadd_dependencies(tb_"}}{{entity}}{{" "}}{{entity}}{{")"}}
+{% endfor %}
 
 add_custom_target(list ALL COMMAND ${CMAKE_VHDL_COMPILER} -d DEPENDS ${VHDL_MODULE} ${VHDL_TEST_MODULE})
- 

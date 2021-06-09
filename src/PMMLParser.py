@@ -29,12 +29,12 @@ class PMMLParser:
             tree_id = 0
             for segment in segmentation.findall("pmml:Segment", self.__namespaces):
                 tree_model_root = segment.find("pmml:TreeModel", self.__namespaces).find("pmml:Node", self.__namespaces)
-                tree = self.__get_tree_model("tree_" + str(tree_id), tree_model_root)
+                tree = self.__get_tree_model(str(tree_id), tree_model_root)
                 self.__trees.append(tree)
                 tree_id += 1
         else:
             tree_model_root = root.find("pmml:TreeModel", self.__namespaces).find("pmml:Node", self.__namespaces)
-            tree = self.__get_tree_model("tree_0", tree_model_root)
+            tree = self.__get_tree_model("0", tree_model_root)
             self.__trees.append(tree)
 
     def get_classes(self):
@@ -58,7 +58,8 @@ class PMMLParser:
         for child in root.find("pmml:DataDictionary", self.__namespaces).findall('pmml:DataField', self.__namespaces):
             if child.find("pmml:Interval", self.__namespaces) is None:
                 continue
-            features.append({"name" : child.attrib['name'].replace('-','_'), "type" : child.attrib['dataType']})
+            data_type = "float" if child.attrib['dataType'] == "double" or child.attrib['dataType'] == "float" else "int"
+            features.append({"name" : child.attrib['name'].replace('-','_'), "type" : data_type})
 
     """
     @brief Scan the DataDictionary section of the PMML file for classes
