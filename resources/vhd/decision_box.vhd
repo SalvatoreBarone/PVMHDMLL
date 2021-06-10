@@ -20,37 +20,6 @@ package common_types is
 	type data_type_t is (float, int);
 end package;
 
-
-------------------------------------------------------------------------------------------------------------------------
--- Basic register with latch behavior
-library ieee;
-use ieee.std_logic_1164.all;
-entity pipe_reg is
-  generic(data_width : natural);
-  port ( 
-    clock    : in  std_logic;
-    reset_n  : in  std_logic;
-    enable   : in  std_logic;
-    data_in  : in  std_logic_vector (data_width-1 downto 0);
-    data_out : out std_logic_vector (data_width-1 downto 0));
-end pipe_reg;
-architecture behavioral of pipe_reg is
-  signal tmp : std_logic_vector(data_width-1 downto 0) := (others => '0');
-begin
-  data_out <= tmp;
-  process(clock, reset_n, data_in, enable)
-    begin
-      if reset_n = '0' then
-        tmp <= (others => '0');
-      elsif rising_edge(clock) then
-        if enable = '1' then
-            tmp <= data_in;
-        end if;
-      end if;
-    end process;
-end behavioral;
-
-
 ------------------------------------------------------------------------------------------------------------------------
 -- Basic comparator entity
 library ieee;

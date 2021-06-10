@@ -17,9 +17,7 @@ pvmhdmll [-h] -i input.pmml -o output_directory
 You MUST define ALL the mentioned parameters.
 
 Starting from the provided PMML file, the PVMHDMLL tool will generate all the VHDL code needed to implement the classifier model (both random forest or single tree are supported) within the target folder. 
-In addition, it will generate 
- - a CMakeLists file and a bash script to compile and run unit tests with GHDL (obviously, you need GHDL in order to run unit testing);
- - a C++ implementation of the classifier.
+In addition, it will generate a C++ implementation of the classifier.
 
 The VHDL and C++ implementations will be placed under the ``vhd`` and ``cc`` subdirectories of the specified target folder, respectively.
 

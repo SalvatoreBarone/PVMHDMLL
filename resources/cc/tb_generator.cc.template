@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <assert.h>
-#include "model.h"
+#include "classifier.h"
 
 typedef union {
   float f;
@@ -31,10 +31,11 @@ int main()
 {% for feature in features -%}
 {{"    data_"}}{{feature['name']}}{{".f = rand() / rand();" if feature['type'] == "float" else " = rand();"}}
 {{"    print_binary(32, data_"}}{{feature['name']}}{{".u);" if feature['type'] == "float" else ");"}}{{" printf(\" \");"}}
-{% endfor %}
-    classifier({% for feature in features -%}{{"data_"}}{{feature['name']}}{{".f, " if feature['type'] == "float" else ", "}}{% endfor %}{% for predicted_class in classes -%}{{"&class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
+{% endfor %}{% for predicted_class in classes -%}
+{{"    class_"}}{{predicted_class}}{{" = 0;"}}
+{% endfor %}    classifier({% for feature in features -%}{{"data_"}}{{feature['name']}}{{".f, " if feature['type'] == "float" else ", "}}{% endfor %}{% for predicted_class in classes -%}{{"&class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
 {% for predicted_class in classes -%}
-{{"    print_binary(32, class_"}}{{predicted_class}}{{");"}}{{" printf(\" \");"}}
+{{"    print_binary(1, class_"}}{{predicted_class}}{{");"}}{{" printf(\" \");" if not loop.last else" printf(\"\\n\");" }}
 {% endfor %}
   }
 }

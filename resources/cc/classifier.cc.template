@@ -15,7 +15,8 @@
 // You should have received a copy of the GNU General Public License along with
 // RMEncoder; if not, write to the Free Software Foundation, Inc., 51 Franklin
 // Street, Fifth Floor, Boston, MA 02110-1301, USA. 
-#include "model.h"
+#include "classifier.h"
+#include <stdio.h>
 
 int func_or(int op0, int op1) {
   return op0 | op1;
@@ -526,8 +527,30 @@ void decision_tree_{{tree['name']}}({% for feature in features -%}{{feature['typ
 
 void classifier({% for feature in features -%}{{feature['type']}}{{" data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{"int *class_"}}{{predicted_class}}{{", " if not loop.last else ")"}}{% endfor %}
 {
-  {% for tree in trees -%}  
-  decision_tree_{{tree['name']}}({% for feature in features -%}{{"data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{"class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}{% endfor %}
+{% for predicted_class in classes -%}
+{{"  "}}*class_{{predicted_class}} = 0;
+{% endfor %}{% for tree in trees -%}  
+{{"  "}}decision_tree_{{tree['name']}}({% for feature in features -%}{{"data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{"class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
+{% endfor %}
+  int* results[{{classes|length}}] = {
+    {% for predicted_class in classes -%}class_{{predicted_class}}{{", " if not loop.last}}{% endfor %}
+    };
+  // printf("Results: ");
+  // for (int i = 0; i < 7; i++)
+  //   printf("%d ", *(results[i]));
+  // printf("\n");
+  int max = *(results[0]);
+  // printf("Max: %d\n", max);
+  for (int i = 1; i < 7; i++)
+    if (max < *(results[i]))
+      max = *(results[i]);
+  // printf("Max: %d\n", max);
+  for (int i = 0; i < 7; i++)
+    *(results[i]) /= max;
+  // printf("Results: ");
+  // for (int i = 0; i < 7; i++)
+  //   printf("%d ", *(results[i]));
+  // printf("\n");
 }
 
 {% for tree in trees -%}
@@ -537,7 +560,7 @@ void decision_tree_{{tree['name']}}({% for feature in features -%}{{feature['typ
   {{"  int "}}{{box['name']}}{{" = data_"}}{{box['feature']}}{{" "}}{{box['c_operator']}}{{" "}}{{box['threshold']}}{{" ? 1 : 0;"}}
 {% endfor %}  
 {% for function in tree['assertions'] -%}
-  {{"  *class_"}}{{function['class']}}{{" += "}}{{function['expression']}}{{";"}}
+  {{"  *class_"}}{{function['class']}}{{" += "}}{{function['expression']|replace('\'','')}}{{";"}}
 {% endfor %}
 }
 {% endfor %}
