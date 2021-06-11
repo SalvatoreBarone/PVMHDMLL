@@ -18,7 +18,6 @@ class TreeModel:
         for node in PreOrderIter(self.__root_node):
             if any(node.children):
                 #search for the data-type of the feature
-                data_type = ""
                 for feature in features:
                     if feature["name"] == node.feature:
                         c_operator = ""
@@ -28,20 +27,18 @@ class TreeModel:
                           c_operator = "<"
                         else: 
                           c_operator = "=="
-                        if feature["type"] == "double" or feature["type"] == "float":
-                            data_type = "float"
+                        if feature["type"] == "double":
                             boxes.append({  "name"      : node.name, 
                                 "feature"       : node.feature,
-                                "data_type"     : data_type,
+                                "data_type"     : feature["type"],
                                 "operator"      : node.operator,
                                 "c_operator"    : c_operator,
                                 "threshold"     : str(node.threshold_value),
-                                "threshold_hex" : str(self.float_to_hex(float(node.threshold_value)))[2:]})
-                        elif feature["type"] == "integer":
-                            data_type = "int"
+                                "threshold_hex" : str(self.double_to_hex(float(node.threshold_value)))[2:]})
+                        else:
                             boxes.append({  "name"          : node.name, 
                                             "feature"       : node.feature,
-                                            "data_type"     : data_type,
+                                            "data_type"     : feature["type"],
                                             "operator"      : node.operator,
                                             "c_operator"    : c_operator,
                                             "threshold"     : str(node.threshold_value),

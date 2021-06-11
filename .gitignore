@@ -5,4 +5,4 @@ resources/vhd/old/*
 resources/vhd/tb/oracles_generator/build/
 prova_st/
 prova_rf/
-*.txt
+resources/vhd/tb/*.txt

@@ -43,7 +43,7 @@ architecture testbench of tb_decision_box_fp is
       result  : out std_logic);
   end component;
   constant data_width     : natural                                  := 32;
-  constant data_type      : data_type_t                              := float;
+  constant data_type      : data_type_t                              := double;
   constant parallel_blocks: natural                                  := 4;
   signal   clock          : std_logic                                := '0';
   signal   reset_n        : std_logic                                := '0';

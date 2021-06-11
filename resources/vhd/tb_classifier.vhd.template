@@ -43,7 +43,7 @@ architecture testbench of tb_classifier is
   constant clock_period    : time       := 10 ns;
   signal   simulate        : std_logic  := '1';
   file     test_oracle     : text;
-  constant data_width      : natural     := 32;
+  constant data_width      : natural     := 64;
   constant parallel_blocks : natural     := 4;
   constant pipe_stages     : natural     := 4;
   signal   clock           : std_logic   := '0';
@@ -74,16 +74,20 @@ architecture testbench of tb_classifier is
   {{"    variable read_class_"}}{{predicted_class}}{{" : std_logic"}}{{";"}}
 {% endfor %}  begin
     reset_n <= '0';
-    wait for 10 ns;	
+    enable <= '0';
+    wait for 50 ns;
     reset_n <= '1';
-    enable <= '1';
     file_open(test_oracle, "../tb_classifier.txt", read_mode);
     while not endfile(test_oracle) loop
       readline(test_oracle, rline);
 {% for feature in features -%}{{"      read(rline, read_data_"}}{{feature['name']}}{{"); read(rline, space); data_"}}{{feature['name']}}{{" <=  read_data_"}}{{feature['name']}}{{";"}}
 {% endfor %}{% for predicted_class in classes -%}
   {{"      read(rline, read_class_"}}{{predicted_class}}{{"); read(rline, space);" if not loop.last else ");"}}
-{% endfor %}      wait for (1+pipe_stages)*clock_period;
+{% endfor %}      
+enable <= '1';
+wait for clock_period;
+enable <= '0';
+wait for (1+pipe_stages)*clock_period;
 {% for predicted_class in classes -%}
   {{"      "}}assert read_class_{{predicted_class}} = class_{{predicted_class}} report  "Error class_{{predicted_class}}=" & std_logic'image(class_{{predicted_class}}) & " read_class_{{predicted_class}}=" & std_logic'image(read_class_{{predicted_class}}) severity failure;
 {% endfor %}      end loop;

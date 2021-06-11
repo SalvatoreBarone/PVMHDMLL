@@ -27,15 +27,13 @@ int main()
 {{"  int class_"}}{{predicted_class}}{{";"}}
 {% endfor %}
 
-  for (int i = 0; i < 10000; i++){
 {% for feature in features -%}
-{{"    data_"}}{{feature['name']}}{{".f = rand() / rand();" if feature['type'] == "double" else " = rand();"}}
-{{"    print_binary(32, data_"}}{{feature['name']}}{{".u);" if feature['type'] == "double" else ");"}}{{" printf(\" \");"}}
+{{"    data_"}}{{feature['name']}}{{".f" if feature['type'] == "double"}} = 0;
+{{"    print_binary(64, data_"}}{{feature['name']}}{{".u);" if feature['type'] == "double" else ");"}}{{" printf(\" \");"}}
 {% endfor %}{% for predicted_class in classes -%}
 {{"    class_"}}{{predicted_class}}{{" = 0;"}}
 {% endfor %}    classifier({% for feature in features -%}{{"data_"}}{{feature['name']}}{{".f, " if feature['type'] == "double" else ", "}}{% endfor %}{% for predicted_class in classes -%}{{"&class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
 {% for predicted_class in classes -%}
 {{"    print_binary(1, class_"}}{{predicted_class}}{{");"}}{{" printf(\" \");" if not loop.last else" printf(\"\\n\");" }}
 {% endfor %}
-  }
 }

@@ -18,508 +18,508 @@
 #include "classifier.h"
 #include <stdio.h>
 
-int func_or(int op0, int op1) {
-  return op0 | op1;
+bool func_or(bool op0, bool op1) {
+  return op0 or op1;
 }
 
-int func_or(int op0, int op1, int op2) {
-  return op0 | op1 | op2;
+bool func_or(bool op0, bool op1, bool op2) {
+  return op0 or op1 or op2;
 }
 
-int func_or(int op0, int op1, int op2, int op3) {
-  return op0 | op1 | op2 | op3;
+bool func_or(bool op0, bool op1, bool op2, bool op3) {
+  return op0 or op1 or op2 or op3;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4) {
-  return op0 | op1 | op2 | op3 | op4;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4) {
+  return op0 or op1 or op2 or op3 or op4;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5) {
-  return op0 | op1 | op2 | op3 | op4 | op5;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5) {
+  return op0 or op1 or op2 or op3 or op4 or op5;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55 | op56;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55 or op56;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55 | op56 | op57;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55 or op56 or op57;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55 | op56 | op57 | op58;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55 or op56 or op57 or op58;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55 | op56 | op57 | op58 | op59;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55 or op56 or op57 or op58 or op59;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59, int op60) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55 | op56 | op57 | op58 | op59 | op60;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59, bool op60) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55 or op56 or op57 or op58 or op59 or op60;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59, int op60, int op61) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55 | op56 | op57 | op58 | op59 | op60 | op61;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59, bool op60, bool op61) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55 or op56 or op57 or op58 or op59 or op60 or op61;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59, int op60, int op61, int op62) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55 | op56 | op57 | op58 | op59 | op60 | op61 | op62;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59, bool op60, bool op61, bool op62) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55 or op56 or op57 or op58 or op59 or op60 or op61 or op62;
 }
 
-int func_or(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59, int op60, int op61, int op62, int op63) {
-  return op0 | op1 | op2 | op3 | op4 | op5 | op6 | op7 | op8 | op9 | op10 | op11 | op12 | op13 | op14 | op15 | op16 | op17 | op18 | op19 | op20 | op21 | op22 | op23 | op24 | op25 | op26 | op27 | op28 | op29 | op30 | op31 | op32 | op33 | op34 | op35 | op36 | op37 | op38 | op39 | op40 | op41 | op42 | op43 | op44 | op45 | op46 | op47 | op48 | op49 | op50 | op51 | op52 | op53 | op54 | op55 | op56 | op57 | op58 | op59 | op60 | op61 | op62 | op63;
+bool func_or(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59, bool op60, bool op61, bool op62, bool op63) {
+  return op0 or op1 or op2 or op3 or op4 or op5 or op6 or op7 or op8 or op9 or op10 or op11 or op12 or op13 or op14 or op15 or op16 or op17 or op18 or op19 or op20 or op21 or op22 or op23 or op24 or op25 or op26 or op27 or op28 or op29 or op30 or op31 or op32 or op33 or op34 or op35 or op36 or op37 or op38 or op39 or op40 or op41 or op42 or op43 or op44 or op45 or op46 or op47 or op48 or op49 or op50 or op51 or op52 or op53 or op54 or op55 or op56 or op57 or op58 or op59 or op60 or op61 or op62 or op63;
 }
 
-int func_and(int op0, int op1) {
-  return op0 & op1;
+bool func_and(bool op0, bool op1) {
+  return op0 and op1;
 }
 
-int func_and(int op0, int op1, int op2) {
-  return op0 & op1 & op2;
+bool func_and(bool op0, bool op1, bool op2) {
+  return op0 and op1 and op2;
 }
 
-int func_and(int op0, int op1, int op2, int op3) {
-  return op0 & op1 & op2 & op3;
+bool func_and(bool op0, bool op1, bool op2, bool op3) {
+  return op0 and op1 and op2 and op3;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4) {
-  return op0 & op1 & op2 & op3 & op4;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4) {
+  return op0 and op1 and op2 and op3 and op4;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5) {
-  return op0 & op1 & op2 & op3 & op4 & op5;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5) {
+  return op0 and op1 and op2 and op3 and op4 and op5;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55 & op56;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55 and op56;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55 & op56 & op57;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55 and op56 and op57;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55 & op56 & op57 & op58;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55 and op56 and op57 and op58;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55 & op56 & op57 & op58 & op59;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55 and op56 and op57 and op58 and op59;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59, int op60) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55 & op56 & op57 & op58 & op59 & op60;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59, bool op60) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55 and op56 and op57 and op58 and op59 and op60;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59, int op60, int op61) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55 & op56 & op57 & op58 & op59 & op60 & op61;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59, bool op60, bool op61) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55 and op56 and op57 and op58 and op59 and op60 and op61;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59, int op60, int op61, int op62) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55 & op56 & op57 & op58 & op59 & op60 & op61 & op62;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59, bool op60, bool op61, bool op62) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55 and op56 and op57 and op58 and op59 and op60 and op61 and op62;
 }
 
-int func_and(int op0, int op1, int op2, int op3, int op4, int op5, int op6, int op7, int op8, int op9, int op10, int op11, int op12, int op13, int op14, int op15, int op16, int op17, int op18, int op19, int op20, int op21, int op22, int op23, int op24, int op25, int op26, int op27, int op28, int op29, int op30, int op31, int op32, int op33, int op34, int op35, int op36, int op37, int op38, int op39, int op40, int op41, int op42, int op43, int op44, int op45, int op46, int op47, int op48, int op49, int op50, int op51, int op52, int op53, int op54, int op55, int op56, int op57, int op58, int op59, int op60, int op61, int op62, int op63) {
-  return op0 & op1 & op2 & op3 & op4 & op5 & op6 & op7 & op8 & op9 & op10 & op11 & op12 & op13 & op14 & op15 & op16 & op17 & op18 & op19 & op20 & op21 & op22 & op23 & op24 & op25 & op26 & op27 & op28 & op29 & op30 & op31 & op32 & op33 & op34 & op35 & op36 & op37 & op38 & op39 & op40 & op41 & op42 & op43 & op44 & op45 & op46 & op47 & op48 & op49 & op50 & op51 & op52 & op53 & op54 & op55 & op56 & op57 & op58 & op59 & op60 & op61 & op62 & op63;
+bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool op6, bool op7, bool op8, bool op9, bool op10, bool op11, bool op12, bool op13, bool op14, bool op15, bool op16, bool op17, bool op18, bool op19, bool op20, bool op21, bool op22, bool op23, bool op24, bool op25, bool op26, bool op27, bool op28, bool op29, bool op30, bool op31, bool op32, bool op33, bool op34, bool op35, bool op36, bool op37, bool op38, bool op39, bool op40, bool op41, bool op42, bool op43, bool op44, bool op45, bool op46, bool op47, bool op48, bool op49, bool op50, bool op51, bool op52, bool op53, bool op54, bool op55, bool op56, bool op57, bool op58, bool op59, bool op60, bool op61, bool op62, bool op63) {
+  return op0 and op1 and op2 and op3 and op4 and op5 and op6 and op7 and op8 and op9 and op10 and op11 and op12 and op13 and op14 and op15 and op16 and op17 and op18 and op19 and op20 and op21 and op22 and op23 and op24 and op25 and op26 and op27 and op28 and op29 and op30 and op31 and op32 and op33 and op34 and op35 and op36 and op37 and op38 and op39 and op40 and op41 and op42 and op43 and op44 and op45 and op46 and op47 and op48 and op49 and op50 and op51 and op52 and op53 and op54 and op55 and op56 and op57 and op58 and op59 and op60 and op61 and op62 and op63;
 }
 
 {% for tree in trees -%}
@@ -535,32 +535,44 @@ void classifier({% for feature in features -%}{{feature['type']}}{{" data_"}}{{f
   int* results[{{classes|length}}] = {
     {% for predicted_class in classes -%}class_{{predicted_class}}{{", " if not loop.last}}{% endfor %}
     };
-  // printf("Results: ");
-  // for (int i = 0; i < 7; i++)
-  //   printf("%d ", *(results[i]));
-  // printf("\n");
   int max = *(results[0]);
-  // printf("Max: %d\n", max);
-  for (int i = 1; i < 7; i++)
+  for (int i = 1; i < {{classes|length}}; i++)
     if (max < *(results[i]))
       max = *(results[i]);
-  // printf("Max: %d\n", max);
-  for (int i = 0; i < 7; i++)
+#ifdef DEBUG    
+  printf("Results: ");
+  for (int i = 0; i < {{classes|length}}; i++)
+    printf("%d ", *(results[i]));
+  printf("\n");
+  printf("Max: %d\n", max);
+#endif
+  for (int i = 0; i < {{classes|length}}; i++)
     *(results[i]) /= max;
-  // printf("Results: ");
-  // for (int i = 0; i < 7; i++)
-  //   printf("%d ", *(results[i]));
-  // printf("\n");
+#ifdef DEBUG    
+  printf("Results: ");
+  for (int i = 0; i < {{classes|length}}; i++)
+    printf("%d ", *(results[i]));
+  printf("\n");
+#endif
 }
 
 {% for tree in trees -%}
 void decision_tree_{{tree['name']}}({% for feature in features -%}{{feature['type']}}{{" data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{"int  *class_"}}{{predicted_class}}{{", " if not loop.last else ")"}}{% endfor %}
 {
 {% for box in tree['boxes'] -%}
-  {{"  int "}}{{box['name']}}{{" = data_"}}{{box['feature']}}{{" "}}{{box['c_operator']}}{{" "}}{{box['threshold']}}{{" ? 1 : 0;"}}
+  {{"  bool "}}{{box['name']}}{{" = data_"}}{{box['feature']}}{{" "}}{{box['c_operator']}}{{" "}}{{box['threshold']}}{{" ? true : false;"}}
 {% endfor %}  
 {% for function in tree['assertions'] -%}
   {{"  *class_"}}{{function['class']}}{{" += "}}{{function['expression']|replace('\'','')}}{{";"}}
 {% endfor %}
+#ifdef DEBUG    
+  int* results[{{classes|length}}] = {
+    {% for predicted_class in classes -%}class_{{predicted_class}}{{", " if not loop.last}}{% endfor %}
+    };
+  printf("\n%s Results: ", __func__);
+  for (int i = 0; i < {{classes|length}}; i++)
+     printf("%d ", *(results[i]));
+  printf("\n");
+#endif
 }
 {% endfor %}

@@ -12,7 +12,7 @@ class PMMLParser:
     @param  pmml_file_name
             Path of the PMML file to be parsed
     """
-    def __init__(self, pmml_file_name):
+    def __init__(self, pmml_file_name, print_trees):
         self.__trees    = []
         self.__features = []
         self.__classes  = []
@@ -31,10 +31,14 @@ class PMMLParser:
                 tree_model_root = segment.find("pmml:TreeModel", self.__namespaces).find("pmml:Node", self.__namespaces)
                 tree = self.__get_tree_model(str(tree_id), tree_model_root)
                 self.__trees.append(tree)
+                if print_trees:
+                  tree.print()
                 tree_id += 1
         else:
             tree_model_root = root.find("pmml:TreeModel", self.__namespaces).find("pmml:Node", self.__namespaces)
             tree = self.__get_tree_model("0", tree_model_root)
+            if print_trees:
+              tree.print()
             self.__trees.append(tree)
 
     def get_classes(self):
@@ -58,7 +62,7 @@ class PMMLParser:
         for child in root.find("pmml:DataDictionary", self.__namespaces).findall('pmml:DataField', self.__namespaces):
             if child.find("pmml:Interval", self.__namespaces) is None:
                 continue
-            data_type = "float" if child.attrib['dataType'] == "double" or child.attrib['dataType'] == "float" else "int"
+            data_type = "double" if child.attrib['dataType'] == "double" else "int"
             features.append({"name" : child.attrib['name'].replace('-','_'), "type" : data_type})
 
     """

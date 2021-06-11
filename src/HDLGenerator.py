@@ -21,6 +21,7 @@ class HDLGenerator:
     __cc_source_template_file = "cc/classifier.cc.template"
     __cc_header_template_file = "cc/classifier.h.template"
     __cc_tb_generator_template_file = "cc/tb_generator.cc.template"
+    __cc_debug_template_file = "cc/debug.cc.template"
     __cc_cmakelist_file = "cc/CMakeLists.txt"
     __cc_build_script_file = "cc/generate_tb.sh"
 
@@ -83,3 +84,9 @@ class HDLGenerator:
         out_file = open(destination + "/cc/tb_generator.cc","w")
         out_file.write(output)
         out_file.close()
+        template = env.get_template(self.__cc_debug_template_file)
+        output = template.render(features  = self.__features, classes = self.__classes)
+        out_file = open(destination + "/cc/debug.cc","w")
+        out_file.write(output)
+        out_file.close()
+        

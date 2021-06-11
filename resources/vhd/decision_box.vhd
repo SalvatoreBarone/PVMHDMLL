@@ -17,7 +17,7 @@
 
 package common_types is 
   type comp_operator_t is (equal, greaterThan, lessThan);
-	type data_type_t is (float, int);
+	type data_type_t is (double, int);
 end package;
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -277,7 +277,7 @@ architecture structural of decision_box is
   end component;
 begin
   assert parallel_blocks >= 1 report "parallel_blocks must be greater or equal than 1" severity failure;
-  fp_comp : if data_type = float generate
+  fp_comp : if data_type = double generate
     comp : db_float 
       generic map (data_width, comp_operator, parallel_blocks)
       port map (clock, reset_n, enable, data_1, data_2, result);

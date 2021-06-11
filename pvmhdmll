@@ -11,16 +11,18 @@ def helpme():
     print("   -h|--help:   print this help screen.")
     print("   -i|--input:  specify the input PMML file to be converted in VHDL.")
     print("   -o|--output: specify the output directory in which VHDL source file will be generated.")
+    print("   -p|--print:  enable print.")
     print("You MUST define ALL the mentioned parameters.")
 
 ## Command-line parsing
 try:
-    options, remainder = getopt.getopt(sys.argv[1:], 'i:o:h', ['input=', 'output=', 'help'])
+    options, remainder = getopt.getopt(sys.argv[1:], 'i:o:hp', ['input=', 'output=', 'print', 'help'])
 except getopt.GetoptError as err:
         print(err)  
         helpme()
         sys.exit(2)
 
+print_tree = False
 for opt, arg in options:
     if opt in ('-h', '--help'):
         helpme()
@@ -29,12 +31,14 @@ for opt, arg in options:
         input_pmml_file = arg
     elif opt in ('-o', '--output'):
         output_dir = arg
+    elif opt in ('-p', '--print'):
+        print_tree = True
 
 ## Here we go...
 try:
     print("Input file:      ", input_pmml_file)
     print("Output directury:", output_dir)
-    model = PMMLParser(input_pmml_file)
+    model = PMMLParser(input_pmml_file, print_tree)
     generator = HDLGenerator(model.get_features(), model.get_classes(), model.get_trees())
     generator.generate(output_dir)
        
