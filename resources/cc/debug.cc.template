@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <assert.h>
+#include <iostream>
 #include "classifier.h"
 
 typedef union {
@@ -12,28 +9,33 @@ typedef union {
 
 void print_binary(int amount,  unsigned long num)
 {
-  assert(amount <= 64);
   for (int i = amount-1; i >= 0; i--)
-    printf("%d", (num & (1<<i)) ? 1 : 0);
+    std::cout << ((num & (1<<i)) ? 1 : 0);
 }
+
 
 int main()
 {
-  srand(time(NULL));
-{% for feature in features -%}
-{{"  "}}{{"ufloat" if feature['type'] == "double" else feature['type']}}{{" data_"}}{{feature['name']}}{{";"}}
-{% endfor %}
-{% for predicted_class in classes -%}
-{{"  int class_"}}{{predicted_class}}{{";"}}
-{% endfor %}
+  {% for feature in features -%}
+  {{"ufloat" if feature['type'] == "double" else feature['type']}}{{" data_"}}{{feature['name']}}{{";"}}
+  {% endfor %}
+  {% for predicted_class in classes -%}
+  int class_{{predicted_class}};
+  {% endfor %}
 
-{% for feature in features -%}
-{{"    data_"}}{{feature['name']}}{{".f" if feature['type'] == "double"}} = 0;
-{{"    print_binary(64, data_"}}{{feature['name']}}{{".u);" if feature['type'] == "double" else ");"}}{{" printf(\" \");"}}
-{% endfor %}{% for predicted_class in classes -%}
-{{"    class_"}}{{predicted_class}}{{" = 0;"}}
-{% endfor %}    classifier({% for feature in features -%}{{"data_"}}{{feature['name']}}{{".f, " if feature['type'] == "double" else ", "}}{% endfor %}{% for predicted_class in classes -%}{{"&class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
-{% for predicted_class in classes -%}
-{{"    print_binary(1, class_"}}{{predicted_class}}{{");"}}{{" printf(\" \");" if not loop.last else" printf(\"\\n\");" }}
-{% endfor %}
+  {% for feature in features -%}
+  data_{{feature['name']}}{{".f" if feature['type'] == "double"}} = 0;
+  print_binary(64, data_{{feature['name']}}{{".u" if feature['type'] == "double"}});
+  std::cout << " ";
+  {% endfor %}
+  
+  {% for predicted_class in classes -%}
+  class_{{predicted_class}} = 0;
+  {% endfor %}   
+
+  classifier({% for feature in features -%}{{"data_"}}{{feature['name']}}{{".f, " if feature['type'] == "double" else ", "}}{% endfor %}{% for predicted_class in classes -%}{{"&class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
+  {% for predicted_class in classes -%}
+  print_binary(1, class_{{predicted_class}}); 
+  std::cout <<{{"\" \"" if not loop.last else "std::endl"}};
+  {% endfor %}
 }

@@ -60,10 +60,15 @@ class PMMLParser:
     """
     def __get_features(self, root, features):
         for child in root.find("pmml:DataDictionary", self.__namespaces).findall('pmml:DataField', self.__namespaces):
-            if child.find("pmml:Interval", self.__namespaces) is None:
+            interval = child.find("pmml:Interval", self.__namespaces)
+            if interval is None:
                 continue
             data_type = "double" if child.attrib['dataType'] == "double" else "int"
-            features.append({"name" : child.attrib['name'].replace('-','_'), "type" : data_type})
+            features.append({
+              "name" : child.attrib['name'].replace('-','_'), 
+              "type" : data_type,
+              "min"  : interval.attrib['leftMargin'],
+              "max"  : interval.attrib['rightMargin']})
 
     """
     @brief Scan the DataDictionary section of the PMML file for classes
