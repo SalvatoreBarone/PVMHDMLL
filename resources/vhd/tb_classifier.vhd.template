@@ -30,16 +30,21 @@ architecture testbench of tb_classifier is
     generic (
       data_width      : natural;
       parallel_blocks : natural;
-      pipe_stages     : natural);
+      pipe_stages     : natural;
+      {% for feature in features -%}
+      neglected_bits_{{feature['name']}} : natural{{";" if not loop.last else ");"}}
+      {% endfor %}
     port (
       clock   : std_logic;
       reset_n : std_logic;
       enable  : std_logic;
       {% for feature in features -%}
-      {{"data_"}}{{feature['name']}}{{": in std_logic_vector(data_width-1 downto 0);"}}
-      {% endfor %}{% for predicted_class in classes -%}
-      {{"class_"}}{{predicted_class}}{{" : out std_logic"}}{{";" if not loop.last else ");"}}
-      {% endfor %}end component;
+      data_{{feature['name']}}: in std_logic_vector(data_width-1 downto neglected_bits_{{feature['name']}});
+      {% endfor %}
+      {% for predicted_class in classes -%}
+      class_{{predicted_class}} : out std_logic{{";" if not loop.last else ");"}}
+      {% endfor %}
+  end component;
   constant clock_period    : time       := 10 ns;
   signal   simulate        : std_logic  := '1';
   file     test_oracle     : text;
@@ -49,13 +54,18 @@ architecture testbench of tb_classifier is
   signal   clock           : std_logic   := '0';
   signal   reset_n         : std_logic   := '0';
   signal   enable          : std_logic   := '0';
-{% for feature in features -%}
-  {{"  signal data_"}}{{feature['name']}}{{": std_logic_vector(data_width-1 downto 0) := (others => '0');"}}
-{% endfor %}{% for predicted_class in classes -%}
-  {{"  signal class_"}}{{predicted_class}}{{" : std_logic"}}{{":= '0';"}}
-{% endfor %}begin
+  {% for feature in features -%}
+  constant neglected_bits_{{feature['name']}} : natural := 0;
+  {% endfor %}
+  {% for feature in features -%}
+  signal data_{{feature['name']}} : std_logic_vector(data_width-1 downto neglected_bits_{{feature['name']}}) := (others => '0');
+  {% endfor %}
+  {% for predicted_class in classes -%}
+  signal class_{{predicted_class}} : std_logic := '0';
+  {% endfor %}
+begin
   uut : classifier
-    generic map(data_width, parallel_blocks, pipe_stages)
+    generic map(data_width, parallel_blocks, pipe_stages, {% for feature in features -%}neglected_bits_{{feature['name']}}{{", " if not loop.last else ")"}}{% endfor %}
     port map(clock, reset_n, enable, {% for feature in features -%}data_{{feature['name']}}, {% endfor %}{% for predicted_class in classes -%}{{"class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
   clock_process : process
   begin
@@ -70,7 +80,7 @@ architecture testbench of tb_classifier is
     variable rline        : line;
     variable space        : character;
     {% for feature in features -%}
-    variable read_data_{{feature['name']}} : std_logic_vector(data_width-1 downto 0);
+    variable read_data_{{feature['name']}} : std_logic_vector(data_width-1 downto neglected_bits_{{feature['name']}});
     {% endfor %}
     {% for predicted_class in classes -%}
     variable read_class_{{predicted_class}} : std_logic;
