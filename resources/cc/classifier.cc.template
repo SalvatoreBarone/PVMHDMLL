@@ -16,7 +16,7 @@
 // RMEncoder; if not, write to the Free Software Foundation, Inc., 51 Franklin
 // Street, Fifth Floor, Boston, MA 02110-1301, USA. 
 #include "classifier.h"
-#include <stdio.h>
+#include <iostream>
 
 bool func_or(bool op0, bool op1) {
   return op0 or op1;
@@ -523,7 +523,8 @@ bool func_and(bool op0, bool op1, bool op2, bool op3, bool op4, bool op5, bool o
 }
 
 {% for tree in trees -%}
-void decision_tree_{{tree['name']}}({% for feature in features -%}{{feature['type']}}{{" data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{" int *class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}{% endfor %}
+void decision_tree_{{tree['name']}}({% for feature in features -%}{{feature['type']}}{{" data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{" int *class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
+{% endfor %}
 
 void classifier({% for feature in features -%}{{feature['type']}}{{" data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{"int *class_"}}{{predicted_class}}{{", " if not loop.last else ")"}}{% endfor %}
 {
@@ -540,19 +541,18 @@ void classifier({% for feature in features -%}{{feature['type']}}{{" data_"}}{{f
     if (max < *(results[i]))
       max = *(results[i]);
 #ifdef DEBUG    
-  printf("Results: ");
+  std::cout <<"Results: ";
   for (int i = 0; i < {{classes|length}}; i++)
-    printf("%d ", *(results[i]));
-  printf("\n");
-  printf("Max: %d\n", max);
+    std::cout << *(results[i]) << " "; 
+  std::cout << std::endl << "Max: " << max << std::endl;
 #endif
   for (int i = 0; i < {{classes|length}}; i++)
     *(results[i]) /= max;
 #ifdef DEBUG    
-  printf("Results: ");
+  std::cout << "Results: ";
   for (int i = 0; i < {{classes|length}}; i++)
-    printf("%d ", *(results[i]));
-  printf("\n");
+    std:: cout << *(results[i]) << " ";
+  std::cout << std::endl;
 #endif
 }
 
@@ -565,14 +565,18 @@ void decision_tree_{{tree['name']}}({% for feature in features -%}{{feature['typ
 {% for function in tree['assertions'] -%}
   {{"  *class_"}}{{function['class']}}{{" += "}}{{function['expression']|replace('\'','')}}{{";"}}
 {% endfor %}
-#ifdef DEBUG    
+#ifdef DEBUG
+  std::cout << std::endl;
+  {% for box in tree['boxes'] -%}
+  std::cout << __func__ << " {{box['name']}}: " << {{box['name']}} << std::endl;
+  {% endfor %}  
   int* results[{{classes|length}}] = {
     {% for predicted_class in classes -%}class_{{predicted_class}}{{", " if not loop.last}}{% endfor %}
     };
-  printf("\n%s Results: ", __func__);
+  std::cout << "Results: ";
   for (int i = 0; i < {{classes|length}}; i++)
-     printf("%d ", *(results[i]));
-  printf("\n");
+    std:: cout << *(results[i]) << " ";
+  std::cout << std::endl;
 #endif
 }
 {% endfor %}

@@ -1,41 +1,39 @@
 #include <iostream>
+#include <bitset>
 #include "classifier.h"
 
-typedef union {
-  double f;
-  unsigned long u;
-} ufloat;
-
-
-void print_binary(int amount,  unsigned long num)
+void print_binary_64(std::ostream& stream, void * const data)
 {
-  for (int i = amount-1; i >= 0; i--)
-    std::cout << ((num & (1<<i)) ? 1 : 0);
+  unsigned long * udata = (unsigned long *)data;
+  stream << std::bitset<64>(*udata);
 }
-
 
 int main()
 {
   {% for feature in features -%}
-  {{"ufloat" if feature['type'] == "double" else feature['type']}}{{" data_"}}{{feature['name']}}{{";"}}
+  {{feature['type']}} data_{{feature['name']}};
   {% endfor %}
   {% for predicted_class in classes -%}
   int class_{{predicted_class}};
   {% endfor %}
 
   {% for feature in features -%}
-  data_{{feature['name']}}{{".f" if feature['type'] == "double"}} = 0;
-  print_binary(64, data_{{feature['name']}}{{".u" if feature['type'] == "double"}});
-  std::cout << " ";
+  data_{{feature['name']}} = 0;
+  {% endfor %}
+  
+  {% for feature in features -%}
+  std::cout <<"{{feature['name']}}: " <<data_{{feature['name']}} << " ";
+  print_binary_64(std::cout,&data_{{feature['name']}});
+  std::cout << std::endl;
   {% endfor %}
   
   {% for predicted_class in classes -%}
   class_{{predicted_class}} = 0;
   {% endfor %}   
 
-  classifier({% for feature in features -%}{{"data_"}}{{feature['name']}}{{".f, " if feature['type'] == "double" else ", "}}{% endfor %}{% for predicted_class in classes -%}{{"&class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
+  classifier({% for feature in features -%}{{"data_"}}{{feature['name']}},{% endfor %}{% for predicted_class in classes -%}{{"&class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
   {% for predicted_class in classes -%}
-  print_binary(1, class_{{predicted_class}}); 
+  std::cout << std::bitset<1>(class_{{predicted_class}}); 
   std::cout <<{{"\" \"" if not loop.last else "std::endl"}};
   {% endfor %}
 }

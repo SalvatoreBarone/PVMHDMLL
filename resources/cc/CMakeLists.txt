@@ -14,6 +14,6 @@ add_custom_target(
   oracle_files ALL
   WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
   COMMAND echo "Please, wait. This may take a while..."
-  COMMAND ./tb_generator > ${ORACLES_DESTINATION_DIRECTORY}/vhd/tb_classifier.txt 
+  COMMAND ./tb_generator ${ORACLES_DESTINATION_DIRECTORY}/vhd/tb_classifier.txt ${ORACLES_DESTINATION_DIRECTORY}/vhd/tb_classifier_debug.txt 
   DEPENDS tb_generator
   VERBATIM)

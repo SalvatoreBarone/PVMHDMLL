@@ -66,13 +66,16 @@ architecture testbench of tb_classifier is
     wait;
   end process clock_process;
   stim_process : process
-    variable rline : line;
-    variable space : character;
-{% for feature in features -%}
-  {{"    variable read_data_"}}{{feature['name']}}{{" : std_logic_vector(data_width-1 downto 0);"}}
-{% endfor %}{% for predicted_class in classes -%}
-  {{"    variable read_class_"}}{{predicted_class}}{{" : std_logic"}}{{";"}}
-{% endfor %}  begin
+    variable line_number  : integer := 0;
+    variable rline        : line;
+    variable space        : character;
+    {% for feature in features -%}
+    variable read_data_{{feature['name']}} : std_logic_vector(data_width-1 downto 0);
+    {% endfor %}
+    {% for predicted_class in classes -%}
+    variable read_class_{{predicted_class}} : std_logic;
+    {% endfor %}  
+  begin
     reset_n <= '0';
     enable <= '0';
     wait for 50 ns;
@@ -80,17 +83,25 @@ architecture testbench of tb_classifier is
     file_open(test_oracle, "../tb_classifier.txt", read_mode);
     while not endfile(test_oracle) loop
       readline(test_oracle, rline);
-{% for feature in features -%}{{"      read(rline, read_data_"}}{{feature['name']}}{{"); read(rline, space); data_"}}{{feature['name']}}{{" <=  read_data_"}}{{feature['name']}}{{";"}}
-{% endfor %}{% for predicted_class in classes -%}
-  {{"      read(rline, read_class_"}}{{predicted_class}}{{"); read(rline, space);" if not loop.last else ");"}}
-{% endfor %}      
-enable <= '1';
-wait for clock_period;
-enable <= '0';
-wait for (1+pipe_stages)*clock_period;
-{% for predicted_class in classes -%}
-  {{"      "}}assert read_class_{{predicted_class}} = class_{{predicted_class}} report  "Error class_{{predicted_class}}=" & std_logic'image(class_{{predicted_class}}) & " read_class_{{predicted_class}}=" & std_logic'image(read_class_{{predicted_class}}) severity failure;
-{% endfor %}      end loop;
+      {% for feature in features -%}
+      read(rline, read_data_{{feature['name']}}); 
+      read(rline, space); 
+      data_{{feature['name']}} <=  read_data_{{feature['name']}};
+      -- report "{{feature['name']}} :" & vec_image(read_data_{{feature['name']}}) severity note;
+      {% endfor %}
+      {% for predicted_class in classes -%}
+      read(rline, read_class_{{predicted_class}});
+      {{"read(rline, space);" if not loop.last}}
+      {% endfor %}      
+      enable <= '1';
+      wait for 2*clock_period;
+      enable <= '0';
+      wait for (1+pipe_stages)*clock_period;
+      {% for predicted_class in classes -%}
+      assert read_class_{{predicted_class}} = class_{{predicted_class}} report  "Error at input line " & integer'image(line_number) & ": class_{{predicted_class}}=" & std_logic'image(class_{{predicted_class}}) & " read_class_{{predicted_class}}=" & std_logic'image(read_class_{{predicted_class}}) severity failure;
+      {% endfor %}
+      line_number := line_number + 1;
+    end loop;
     simulate <= '0';
     wait;
   end process;

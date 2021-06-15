@@ -33,10 +33,8 @@ begin
     begin
       if reset_n = '0' then
         tmp <= (others => '0');
-      elsif rising_edge(clock) then
-        if enable = '1' then
-            tmp <= data_in;
-        end if;
+      elsif enable = '1' and rising_edge(clock) then
+        tmp <= data_in;
       end if;
     end process;
 end behavioral;
