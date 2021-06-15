@@ -528,28 +528,22 @@ void decision_tree_{{tree['name']}}({% for feature in features -%}{{feature['typ
 
 void classifier({% for feature in features -%}{{feature['type']}}{{" data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{"int *class_"}}{{predicted_class}}{{", " if not loop.last else ")"}}{% endfor %}
 {
-{% for predicted_class in classes -%}
-{{"  "}}*class_{{predicted_class}} = 0;
-{% endfor %}{% for tree in trees -%}  
-{{"  "}}decision_tree_{{tree['name']}}({% for feature in features -%}{{"data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{"class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
-{% endfor %}
+  {% for predicted_class in classes -%}
+  *class_{{predicted_class}} = 0;
+  {% endfor %}
+  {% for tree in trees -%}  
+  decision_tree_{{tree['name']}}({% for feature in features -%}{{"data_"}}{{feature['name']}}{{", "}}{% endfor %}{% for predicted_class in classes -%}{{"class_"}}{{predicted_class}}{{", " if not loop.last else ");"}}{% endfor %}
+  {% endfor %}
+
   int* results[{{classes|length}}] = {
     {% for predicted_class in classes -%}class_{{predicted_class}}{{", " if not loop.last}}{% endfor %}
     };
-  int max = *(results[0]);
-  for (int i = 1; i < {{classes|length}}; i++)
-    if (max < *(results[i]))
-      max = *(results[i]);
-#ifdef DEBUG    
-  std::cout <<"Results: ";
+  {% if trees|length > 1 %}
   for (int i = 0; i < {{classes|length}}; i++)
-    std::cout << *(results[i]) << " "; 
-  std::cout << std::endl << "Max: " << max << std::endl;
-#endif
-  for (int i = 0; i < {{classes|length}}; i++)
-    *(results[i]) /= max;
+    *(results[i]) = (*(results[i]) >= ({{trees|length}} / 2) ? 1 : 0);
+  {% endif %}
 #ifdef DEBUG    
-  std::cout << "Results: ";
+  std::cout << std::endl << "Final results: ";
   for (int i = 0; i < {{classes|length}}; i++)
     std:: cout << *(results[i]) << " ";
   std::cout << std::endl;

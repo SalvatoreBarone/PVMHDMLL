@@ -66,7 +66,7 @@ architecture testbench of tb_classifier is
     wait;
   end process clock_process;
   stim_process : process
-    variable line_number  : integer := 0;
+    variable line_number  : integer := 1;
     variable rline        : line;
     variable space        : character;
     {% for feature in features -%}
@@ -96,7 +96,7 @@ architecture testbench of tb_classifier is
       enable <= '1';
       wait for 2*clock_period;
       enable <= '0';
-      wait for (1+pipe_stages)*clock_period;
+      wait for (3+pipe_stages)*clock_period;
       {% for predicted_class in classes -%}
       assert read_class_{{predicted_class}} = class_{{predicted_class}} report  "Error at input line " & integer'image(line_number) & ": class_{{predicted_class}}=" & std_logic'image(class_{{predicted_class}}) & " read_class_{{predicted_class}}=" & std_logic'image(read_class_{{predicted_class}}) severity failure;
       {% endfor %}
