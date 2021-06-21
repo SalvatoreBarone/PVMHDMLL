@@ -28,18 +28,22 @@ int main(int argc, char** argv)
   {% endfor %}
 
   {% for feature in features -%}
-  {{feature['type']}}{{" data_"}}{{feature['name']}}{{";"}}
+  {{feature['type']}} data_{{feature['name']}}{{";"}}
+  debug_stream << "{{feature['name']}};";
   {% endfor %}
   {% for predicted_class in classes -%}
   int class_{{predicted_class}};
+  debug_stream << "{{predicted_class}}" << {{"\";\"" if not loop.last else "std::endl"}};
   {% endfor %}
+
+
 
   for (int i = 0; i < 10000; i++){
     {% for feature in features -%}
     data_{{feature['name']}} = distrib_{{feature['name']}}(gen_{{feature['name']}});
     print_binary_64(bin_stream, &data_{{feature['name']}});
     bin_stream << " ";
-    debug_stream << data_{{feature['name']}} << {{"\" \"" if not loop.last else "std::endl"}};
+    debug_stream << data_{{feature['name']}} << ";";
     {% endfor %}
     {% for predicted_class in classes -%}
     class_{{predicted_class}} = 0;
@@ -48,6 +52,7 @@ int main(int argc, char** argv)
 
     {% for predicted_class in classes -%}
     bin_stream << std::bitset<1>(class_{{predicted_class}}) << {{"\" \"" if not loop.last else "std::endl"}};
+    debug_stream << class_{{predicted_class}} << {{"\";\"" if not loop.last else "std::endl"}};
     {% endfor %}
   }
 }
